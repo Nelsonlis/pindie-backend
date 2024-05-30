@@ -1,12 +1,4 @@
-const allowedCors = [
-    
-    'https://practicum.yandex.ru',
-    'https://students-projects.ru',
-    'localhost:3000',
-    'http://localhost:3000',
-    'localhost:3002',
-    'https://pengvinzxc.nomorepartiesco.ru'
-  ];
+
 
 function cors(req, res, next) {
     const { origin } = req.headers
@@ -18,6 +10,14 @@ function cors(req, res, next) {
     next()
 }
 
+const allowedCors = [
+    'https://practicum.yandex.ru',
+    'https://students-projects.ru',
+    'localhost:3000',
+    'http://localhost:3000',
+    'localhost:3002',
+    'https://pengvinzxc.nomorepartiesco.ru'
+  ];
 
 
   module.exports = cors
